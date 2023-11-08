@@ -37,6 +37,7 @@ typedef void (*generic_controller_transaction_handler_t)(const generic_controlle
 typedef struct generic_controller {
     void* context;
     generic_controller_handler_t reset;
+    generic_controller_handler_t destroy;
     generic_controller_transaction_handler_t send_command;
     generic_controller_transaction_handler_t send_data;
 } generic_controller_t;
